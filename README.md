@@ -47,3 +47,6 @@ Formação e Certificações: Seção dedicada a graduações, cursos e certific
 Links Dinâmicos de Contato: Botões interativos para redirecionamento imediato a perfis profissionais (LinkedIn, GitHub) e disparo de e-mail via mailto:.
 
 Design Responsivo (Mobile-First): Layout adaptável para leitura fluida em smartphones, tablets e computadores de diferentes resoluções.
+
+6. Link da publicação no GitHub:
+https://github.com/brunoalmp03-lang/Portif-lio-Full-Stack/tree/main

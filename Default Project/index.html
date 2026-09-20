@@ -1,343 +1,267 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio Executivo de Tecnologia — trajetória profissional, stack tecnológica, projetos no GitHub e formação acadêmica de um desenvolvedor de software." />
-  <title>Portfólio Executivo de Tecnologia | João da Silva</title>
+  <meta name="description" content="Portfólio de Bruno de Almeida Pessoa — desenvolvedor web e estudante de Análise e Desenvolvimento de Sistemas." />
+  <meta name="color-scheme" content="light" />
+  <title>Bruno de Almeida Pessoa · Portfólio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
-  <header class="header">
-    <nav class="nav container" aria-label="Navegação principal">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-mark">&lt;/&gt;</span>
-        <span class="nav__logo-text">João&nbsp;da&nbsp;Silva</span>
+  <!-- ============ CABEÇALHO / NAV ============ -->
+  <header class="site-head">
+    <div class="container site-head__inner">
+      <a href="#inicio" class="site-head__brand" aria-label="Ir para o início">
+        <span class="site-head__brand-mark" aria-hidden="true">B</span>
+        <span class="site-head__brand-text">Bruno de Almeida Pessoa</span>
       </a>
 
-      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
+      <button class="site-head__toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-menu">
+        <span class="site-head__toggle-bar"></span>
+        <span class="site-head__toggle-bar"></span>
+        <span class="site-head__toggle-bar"></span>
       </button>
 
-      <ul class="nav__menu" id="nav-menu">
-        <li class="nav__item"><a href="#hero" class="nav__link">Início</a></li>
-        <li class="nav__item"><a href="#experiencia" class="nav__link">Experiência</a></li>
-        <li class="nav__item"><a href="#projetos" class="nav__link">Projetos</a></li>
-        <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
-        <li class="nav__item"><a href="#formacao" class="nav__link">Formação</a></li>
-        <li class="nav__item"><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
-      </ul>
-    </nav>
+      <nav class="site-head__nav" id="nav-menu" aria-label="Navegação principal">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#formacao" class="nav-link">Formação</a>
+        <a href="#experiencia" class="nav-link">Experiência</a>
+        <a href="#contato" class="nav-link nav-link--accent">Contato</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- ============ HERO / RESUMO TÉCNICO ============ -->
-    <section id="hero" class="hero section">
-      <div class="container hero__container">
-        <p class="hero__greeting">Olá, eu sou</p>
-        <h1 class="hero__title">João da Silva</h1>
-        <h2 class="hero__subtitle">Desenvolvedor Full Stack <span aria-hidden="true">·</span> <span class="hero__specialty">Especialista em Soluções Web</span></h2>
-        <p class="hero__summary">
-          Profissional com sólida experiência na análise, projeto e desenvolvimento de sistemas
-          corporativos. Transformo requisitos de negócio em soluções escaláveis, com foco em
-          qualidade de código, performance e entrega de valor contínua.
-        </p>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+      <span class="hero__watermark" aria-hidden="true">dev.</span>
+      <div class="container hero__inner">
 
-        <div class="hero__actions">
-          <a href="#projetos" class="btn btn--primary">Ver Projetos</a>
-          <a href="mailto:joao.silva@email.com?subject=Contato%20via%20Portf%C3%B3lio" class="btn btn--outline">Entrar em Contato</a>
+        <div class="hero__photo" aria-hidden="true">
+          <img src="foto-perfil.jpeg" alt="Foto de Bruno de Almeida Pessoa" class="hero__img" />
+          <span class="hero__photo-note">foco em desenvolvimento</span>
         </div>
 
-        <ul class="hero__tags" aria-label="Principais tecnologias">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>SQL</li>
-          <li>Azure DevOps</li>
-        </ul>
+        <div class="hero__body">
+          <h1 class="hero__title">Bruno de&nbsp;Almeida <em>Pessoa</em></h1>
+          <p class="hero__role">Desenvolvedor Web <span class="hero__role-sep">·</span> Estudante de ADS</p>
+          <p class="hero__lede">
+            Estudante de Análise e Desenvolvimento de Sistemas, focado em
+            desenvolvimento web — construindo interfaces funcionais com HTML,
+            CSS e JavaScript, com base em C e Python. Além dos estudos,
+            trabalho desde 2016 em uma loja de móveis novos e usados, onde
+            também conserto e revendo linha branca e eletrodomésticos.
+          </p>
+          <div class="hero__actions">
+            <a href="#projetos" class="btn btn--primary">Ver meus projetos</a>
+            <a href="https://www.linkedin.com/in/bruno-de-almeida-pessoa-51880338a" target="_blank" rel="noopener noreferrer" class="btn btn--outline">LinkedIn ↗</a>
+          </div>
+          <ul class="hero__tags" aria-label="Tecnologias e áreas de atuação">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ============ EXPERIÊNCIA PROFISSIONAL ============ -->
-    <section id="experiencia" class="section section--alt">
-      <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">Experiência Profissional</h2>
-          <p class="section__subtitle">Histórico cronológico de atuação e principais entregas.</p>
-        </header>
-
-        <ol class="timeline">
-          <li class="timeline__item">
-            <div class="timeline__period">Jan 2022 — Atual</div>
-            <article class="timeline__card">
-              <h3 class="timeline__role">Desenvolvedor Sênior</h3>
-              <p class="timeline__company">Empresa Exemplo Ltda. · São Paulo, SP (Híbrido)</p>
-              <ul class="timeline__activities">
-                <li>Liderança técnica de squad responsável pela plataforma de vendas, atendendo +500 mil usuários/mês.</li>
-                <li>Refatoração de microsserviços legados em Node.js/TypeScript, reduzindo o tempo de resposta médio em 40%.</li>
-                <li>Implementação de pipeline CI/CD com Azure DevOps e testes automatizados (cobertura &gt; 80%).</li>
-                <li>Mentoria de desenvolvedores júnior e padronização de code review.</li>
-              </ul>
-            </article>
-          </li>
-
-          <li class="timeline__item">
-            <div class="timeline__period">Mar 2019 — Dez 2021</div>
-            <article class="timeline__card">
-              <h3 class="timeline__role">Desenvolvedor Pleno</h3>
-              <p class="timeline__company">Tecnologia Alfa S.A. · Campinas, SP</p>
-              <ul class="timeline__activities">
-                <li>Desenvolvimento de APIs REST em C#/.NET Core integrando ERPs e sistemas financeiros.</li>
-                <li>Criação de front-end responsivo com React e Redux para portal de autoatendimento do cliente.</li>
-                <li>Otimização de consultas SQL Server, reduzindo relatórios críticos de minutos para segundos.</li>
-              </ul>
-            </article>
-          </li>
-
-          <li class="timeline__item">
-            <div class="timeline__period">Jun 2017 — Fev 2019</div>
-            <article class="timeline__card">
-              <h3 class="timeline__role">Desenvolvedor Júnior</h3>
-              <p class="timeline__company">Beta Systems ME · Remoto</p>
-              <ul class="timeline__activities">
-                <li>Manutenção e evolução de sistemas web em PHP e JavaScript vanilla.</li>
-                <li>Sustentação de aplicações internas, correções de bugs e melhoria contínua de processos.</li>
-                <li>Participação ativa em cerimônias ágeis (Scrum): planning, dailies e retrospectives.</li>
-              </ul>
-            </article>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ PROJETOS DE DESTAQUE ============ -->
+    <!-- ============ PROJETOS E LINGUAGENS ============ -->
     <section id="projetos" class="section">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">Projetos de Destaque</h2>
-          <p class="section__subtitle">Códigos e sistemas desenvolvidos — repositórios completos no GitHub.</p>
+        <header class="section__head">
+          <p class="section__kicker">Projetos e estudos</p>
+          <h2 class="section__title">Projetos</h2>
+          <p class="section__subtitle">O que estou construindo no mundo do desenvolvimento.</p>
         </header>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-card__top">
-              <svg class="project-card__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
-              <a class="project-card__repo-link" href="https://github.com/joaodasilva/api-gateway-modular" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório api-gateway-modular no GitHub">Repositório ↗</a>
-            </div>
-            <h3 class="project-card__title">API Gateway Modular</h3>
-            <p class="project-card__desc">Gateway REST com autenticação JWT, rate limiting e roteamento dinâmico de microsserviços. Pronto para deploy em nuvem.</p>
-            <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-              <li>Node.js</li><li>TypeScript</li><li>Docker</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__top">
-              <svg class="project-card__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
-              <a class="project-card__repo-link" href="https://github.com/joaodasilva/dashboard-financeiro-react" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório dashboard-financeiro-react no GitHub">Repositório ↗</a>
-            </div>
-            <h3 class="project-card__title">Dashboard Financeiro React</h3>
-            <p class="project-card__desc">Aplicação SPA para controle financeiro pessoal com gráficos interativos, exportação CSV e tema acessível (WCAG AA).</p>
-            <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-              <li>React</li><li>Vite</li><li>Chart.js</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__top">
-              <svg class="project-card__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
-              <a class="project-card__repo-link" href="https://github.com/joaodasilva/bot-automacao-relatorios" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório bot-automacao-relatorios no GitHub">Repositório ↗</a>
-            </div>
-            <h3 class="project-card__title">Bot de Automação de Relatórios</h3>
-            <p class="project-card__desc">Automação Python que consolida planilhas operacionais diárias e envia relatórios por e-mail, economizando 10h semanais de trabalho manual.</p>
-            <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-              <li>Python</li><li>Pandas</li><li>SMTP</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__top">
-              <svg class="project-card__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
-              <a class="project-card__repo-link" href="https://github.com/joaodasilva/crud-postgresql-dotnet" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório crud-postgresql-dotnet no GitHub">Repositório ↗</a>
-            </div>
-            <h3 class="project-card__title">API CRUD .NET + PostgreSQL</h3>
-            <p class="project-card__desc">API completa com Entity Framework Core, validação FluentValidation, paginação, versionamento e documentação via Swagger.</p>
-            <ul class="project-card__stack" aria-label="Tecnologias utilizadas">
-              <li>.NET Core</li><li>PostgreSQL</li><li>Swagger</li>
-            </ul>
-          </article>
+        <div class="project-card reveal">
+          <div class="project-card__top">
+            <h3 class="project-card__name">PayJam</h3>
+            <a class="project-card__link" href="https://github.com/brunoalmp03-lang" target="_blank" rel="noopener noreferrer">ver no GitHub ↗</a>
+          </div>
+          <p class="project-card__desc">
+            Página de formulários de uma empresa de créditos. A PayJam atua
+            como intermediária, conectando o investidor ao tomador de crédito —
+            projeto desenvolvido para a faculdade.
+          </p>
+          <ul class="project-card__stack" aria-label="Tecnologias utilizadas no projeto PayJam">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
         </div>
 
-        <div class="projects-more">
-          <a class="btn btn--outline" href="https://github.com/joaodasilva" target="_blank" rel="noopener noreferrer">Ver todos os projetos no GitHub ↗</a>
+        <div class="skills reveal">
+          <h3 class="skills__title">Linguagens que estudo</h3>
+          <ul class="skills__chips" aria-label="Linguagens e tecnologias estudadas">
+            <li>C</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ PILHA TECNOLÓGICA / HABILIDADES ============ -->
-    <section id="habilidades" class="section section--alt">
+    <!-- ============ FORMAÇÃO ============ -->
+    <section id="formacao" class="section section--soft">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">Tech Stack &amp; Habilidades</h2>
-          <p class="section__subtitle">Competências técnicas e comportamentais aplicadas em produção.</p>
+        <header class="section__head">
+          <p class="section__kicker">Formação</p>
+          <h2 class="section__title">Formação acadêmica</h2>
+          <p class="section__subtitle">Base em Análise e Desenvolvimento de Sistemas.</p>
         </header>
 
-        <div class="skills-grid">
-          <div class="skills-col">
-            <h3 class="skills-col__title">Hard Skills</h3>
-
-            <div class="skill-group">
-              <h4 class="skill-group__name">Linguagens</h4>
-              <ul class="chips">
-                <li class="chip">JavaScript (ES6+)</li>
-                <li class="chip">TypeScript</li>
-                <li class="chip">Python</li>
-                <li class="chip">C#</li>
-                <li class="chip">SQL</li>
-              </ul>
-            </div>
-
-            <div class="skill-group">
-              <h4 class="skill-group__name">Frameworks &amp; Bibliotecas</h4>
-              <ul class="chips">
-                <li class="chip">React</li>
-                <li class="chip">Node.js / Express</li>
-                <li class="chip">.NET Core</li>
-                <li class="chip">Entity Framework</li>
-              </ul>
-            </div>
-
-            <div class="skill-group">
-              <h4 class="skill-group__name">Ferramentas &amp; Plataformas</h4>
-              <ul class="chips">
-                <li class="chip">Git &amp; GitHub</li>
-                <li class="chip">Docker</li>
-                <li class="chip">Azure DevOps</li>
-                <li class="chip">SQL Server / PostgreSQL</li>
-                <li class="chip">REST APIs</li>
-                <li class="chip">CI/CD</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="skills-col">
-            <h3 class="skills-col__title">Soft Skills</h3>
-            <ul class="soft-skills">
-              <li><strong>Comunicação técnica:</strong> tradução de necessidades de negócio em especificações claras para times multidisciplinares.</li>
-              <li><strong>Liderança de squad:</strong> condução técnica, priorização e mentoria de devs em início de carreira.</li>
-              <li><strong>Resolução de problemas:</strong> abordagem analítica para debugging e arquitetura sob restrições.</li>
-              <li><strong>Gestão de tempo:</strong> entregas consistentes em ambientes ágeis (Scrum/Kanban).</li>
-              <li><strong>Aprendizado contínuo:</strong> atualização constante em novas stacks e boas práticas de engenharia.</li>
-            </ul>
-          </div>
+        <div class="edu-grid reveal">
+          <article class="edu-card">
+            <h3 class="edu-card__title">Análise e Desenvolvimento de Sistemas</h3>
+            <p class="edu-card__org">Universidade Cruzeiro do Sul</p>
+            <p class="edu-card__period">2 semestres concluídos</p>
+          </article>
+          <article class="edu-card edu-card--current">
+            <span class="edu-card__badge">Em curso</span>
+            <h3 class="edu-card__title">Análise e Desenvolvimento de Sistemas</h3>
+            <p class="edu-card__org">IFSP — Instituto Federal de São Paulo · Guarulhos</p>
+            <p class="edu-card__period">2º semestre · em curso</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ FORMAÇÃO E CERTIFICAÇÕES ============ -->
-    <section id="formacao" class="section">
+    <!-- ============ EXPERIÊNCIA (COADJUVANTE) ============ -->
+    <section id="experiencia" class="section">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title">Formação &amp; Certificações</h2>
-          <p class="section__subtitle">Base acadêmica e atualização profissional contínua.</p>
+        <header class="section__head">
+          <p class="section__kicker">Experiência profissional</p>
+          <h2 class="section__title">Além do código</h2>
+          <p class="section__subtitle">
+            Enquanto estudo programação, mantenho uma longa vivência no comércio
+            e no conserto — disciplina, resolução de problemas e atendimento
+            ao cliente que levam para qualquer projeto.
+          </p>
         </header>
 
-        <div class="edu-grid">
-          <div class="edu-col">
-            <h3 class="edu-col__title">Formação Acadêmica</h3>
-            <article class="edu-card">
-              <span class="edu-card__period">2013 — 2017</span>
-              <h4 class="edu-card__title">Bacharelado em Ciência da Computação</h4>
-              <p class="edu-card__org">Universidade Estadual — Campinas, SP</p>
-            </article>
-            <article class="edu-card">
-              <span class="edu-card__period">2020 — 2021</span>
-              <h4 class="edu-card__title">Pós-graduação em Arquitetura de Software</h4>
-              <p class="edu-card__org">Instituto Federal de Tecnologia — EAD</p>
-            </article>
+        <article class="job-card reveal">
+          <div class="job-card__stamp" aria-hidden="true">
+            <span class="job-card__stamp-year">2016</span>
+            <span class="job-card__stamp-note">até o momento</span>
+          </div>
+          <div class="job-card__main">
+            <h3 class="job-card__title">Técnico de Linha Branca e Eletrodomésticos</h3>
+            <p class="job-card__company">Loja de móveis novos e usados</p>
+            <p class="job-card__desc">
+              Trabalho em uma loja que revende móveis novos e usados, atuando
+              no conserto e na revenda de todos os produtos da loja.
+            </p>
+          </div>
+        </article>
+
+        <!-- Carrossel: componente Bootstrap 5 com transição de fade -->
+        <div id="storeCarousel" class="carousel carousel-fade reveal" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover" data-bs-wrap="true" data-bs-touch="true">
+          <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active">
+              <div class="service-card">
+                <div class="service-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                </div>
+                <p class="service-card__kicker">Revenda</p>
+                <h3 class="service-card__title">Móveis novos e usados</h3>
+                <p class="service-card__desc">
+                  A loja revende móveis novos e usados e todos os produtos
+                  que eu conserto na oficina — o cliente leva o produto
+                  pronto ou em conserto.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="service-card">
+                <div class="service-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="3" y1="11" x2="21" y2="11"/><line x1="9" y1="5" x2="9" y2="8"/><line x1="9" y1="14" x2="9" y2="17"/></svg>
+                </div>
+                <p class="service-card__kicker">Refrigeração</p>
+                <h3 class="service-card__title">Linha branca de refrigeração</h3>
+                <p class="service-card__desc">
+                  Conserto e revenda de geladeiras, freezers, expositoras,
+                  cervejeiras e outros equipamentos da linha branca.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="service-card">
+                <div class="service-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="8.5" x2="20" y2="8.5"/><circle cx="12" cy="15" r="3"/><circle cx="12" cy="15" r=".5"/></svg>
+                </div>
+                <p class="service-card__kicker">Eletrodomésticos</p>
+                <h3 class="service-card__title">Lavadoras &amp; micro-ondas</h3>
+                <p class="service-card__desc">
+                  Conserto e revenda de máquinas de lavar e micro-ondas,
+                  com o mesmo cuidado de atendimento da loja.
+                </p>
+              </div>
+            </div>
+
           </div>
 
-          <div class="edu-col">
-            <h3 class="edu-col__title">Certificações &amp; Cursos</h3>
-            <article class="edu-card">
-              <span class="edu-card__period">2023</span>
-              <h4 class="edu-card__title">Microsoft Certified: Azure Developer Associate (AZ-204)</h4>
-              <p class="edu-card__org">Microsoft</p>
-            </article>
-            <article class="edu-card">
-              <span class="edu-card__period">2022</span>
-              <h4 class="edu-card__title">AWS Cloud Practitioner</h4>
-              <p class="edu-card__org">Amazon Web Services</p>
-            </article>
-            <article class="edu-card">
-              <span class="edu-card__period">2021</span>
-              <h4 class="edu-card__title">Clean Code &amp; Arquitetura Serverless</h4>
-              <p class="edu-card__org">Plataforma de cursos online — Extensão</p>
-            </article>
+          <button class="carousel-control-prev carousel-control-custom" type="button" data-bs-target="#storeCarousel" data-bs-slide="prev" aria-label="Slide anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next carousel-control-custom" type="button" data-bs-target="#storeCarousel" data-bs-slide="next" aria-label="Próximo slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+
+          <div class="carousel-indicators" aria-label="Escolher slide">
+            <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1, móveis novos e usados"></button>
+            <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="1" aria-label="Slide 2, linha branca de refrigeração"></button>
+            <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="2" aria-label="Slide 3, lavadoras e micro-ondas"></button>
           </div>
         </div>
+
+        <p class="experience__note reveal">
+          Revendo todos os produtos que conserto na oficina — da linha de
+          refrigeração ao micro-ondas — <strong>e também móveis novos e usados</strong>.
+          Na mesma loja, desde 2016.
+        </p>
       </div>
     </section>
   </main>
 
   <!-- ============ FOOTER / CONTATO ============ -->
-  <footer id="contato" class="footer">
-    <div class="container footer__container">
-      <div class="footer__info">
-        <p class="footer__logo"><span class="nav__logo-mark">&lt;/&gt;</span> João da Silva</p>
-        <p class="footer__tagline">Desenvolvedor Full Stack — disponível para novos desafios.</p>
+  <footer id="contato" class="contact">
+    <div class="container contact__inner">
+      <h2 class="contact__title">Vamos conversar?</h2>
+      <p class="contact__sub">
+        Para projetos de tecnologia, oportunidades de desenvolvimento e
+        também consertos e revenda de móveis.
+      </p>
+
+      <div class="contact__actions">
+        <a href="https://www.linkedin.com/in/bruno-de-almeida-pessoa-51880338a" target="_blank" rel="noopener noreferrer" class="btn btn--primary">LinkedIn ↗</a>
+        <a href="https://github.com/brunoalmp03-lang" target="_blank" rel="noopener noreferrer" class="btn btn--outline">GitHub ↗</a>
       </div>
 
-      <address class="footer__contact">
-        <h2 class="footer__heading">Contato direto</h2>
-        <ul class="footer__links">
-          <li>
-            <a href="mailto:joao.silva@email.com" class="footer__link">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              joao.silva@email.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+5511987654321" class="footer__link">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +55 (11) 98765-4321
-            </a>
-          </li>
-        </ul>
-      </address>
-
-      <div class="footer__social">
-        <h2 class="footer__heading">Redes profissionais</h2>
-        <ul class="footer__links">
-          <li>
-            <a href="https://www.linkedin.com/in/joaodasilva" target="_blank" rel="noopener noreferrer" class="footer__link">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/joaodasilva" target="_blank" rel="noopener noreferrer" class="footer__link">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .3z"/></svg>
-              GitHub
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p>© <span id="year">2026</span> João da Silva · Portfólio Executivo de Tecnologia · HTML5 · CSS3 · JS puro</p>
+      <p class="contact__note">
+        <span aria-hidden="true">©</span><span id="year">2026</span> Bruno de Almeida Pessoa ·
+        Bootstrap 5 · HTML, CSS e JavaScript
+      </p>
     </div>
   </footer>
 
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

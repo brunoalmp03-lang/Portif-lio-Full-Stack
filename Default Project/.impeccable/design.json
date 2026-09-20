@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-20T00:00:00Z",
+  "title": "Design System: Bruno de Almeida Pessoa · Portfólio",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Fundo", "canonical": "#f7f3ec", "tonalRamp": ["#e5dccb", "#ecdfc4", "#f7f3ec", "#faf6f0", "#fdfdfa", "#ffffff"] },
+      "bg-soft": { "role": "neutral", "displayName": "Fundo Suave", "canonical": "#f2ede3", "tonalRamp": ["#ddd3c0", "#e6dfd0", "#f2ede3", "#f6f0e6", "#faf6ef", "#fdfbf7"] },
+      "panel": { "role": "neutral", "displayName": "Painel", "canonical": "#ffffff", "tonalRamp": ["#d9cebc", "#eef3f0", "#ffffff", "#fdfbf7", "#faf6ef"] },
+      "panel-soft": { "role": "neutral", "displayName": "Painel Suave", "canonical": "#fdfbf7", "tonalRamp": ["#e6ddcf", "#f2ede3", "#fdfbf7", "#ffffff"] },
+      "border": { "role": "neutral", "displayName": "Borda", "canonical": "#e6ddcf", "tonalRamp": ["#cdc1ac", "#dcd0bd", "#e6ddcf", "#efe8db", "#f7f2e9"] },
+      "border-strong": { "role": "neutral", "displayName": "Borda Forte", "canonical": "#d9cebc", "tonalRamp": ["#bfb19a", "#d2c7b4", "#d9cebc", "#e6ddcf", "#efe8db"] },
+      "text": { "role": "neutral", "displayName": "Texto", "canonical": "#23262b", "tonalRamp": ["#3a4149", "#49515a", "#5c636d", "#6f7780", "#8a9199", "#23262b"] },
+      "text-muted": { "role": "neutral", "displayName": "Texto Suave", "canonical": "#5c636d", "tonalRamp": ["#41484f", "#4f565e", "#5c636d", "#6f7780", "#838a92"] },
+      "text-cold": { "role": "neutral", "displayName": "Cinza Frio", "canonical": "#46525c", "tonalRamp": ["#2e3942", "#3b4650", "#46525c", "#5c636d", "#8a9199"] },
+      "accent": { "role": "primary", "displayName": "Âmbar de Couro", "canonical": "#92400e", "tonalRamp": ["#5c2808", "#6d2f0a", "#7c3410", "#92400e", "#b45309", "#c2641c", "#d67a34", "#e8a26b"] },
+      "accent-strong": { "role": "primary", "displayName": "Couro Profundo", "canonical": "#7c3410", "tonalRamp": ["#4d2006", "#5c2808", "#6d2f0a", "#7c3410", "#92400e"] },
+      "teal": { "role": "secondary", "displayName": "Verde-azulado Técnico", "canonical": "#0f766e", "tonalRamp": ["#07404b", "#0a4f4f", "#0f766e", "#115e59", "#148479", "#1a948a"] },
+      "teal-soft": { "role": "secondary", "displayName": "Teal Suave", "canonical": "#e7f1ef", "tonalRamp": ["#cce0e0", "#d9e8e6", "#e7f1ef", "#eef5f3", "#f5f9f8"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Fraunces", "purpose": "Identidade: nome e todos os títulos. Peso 700–900, serifa com presença de letreiro." },
+      "body": { "displayName": "IBM Plex Sans", "purpose": "Leitura: prosa, cards, botões, conteúdo corrido." },
+      "kicker": { "displayName": "Kicker", "purpose": "Rótulos de seção e de card em uppercase leve 0.08em, cor teal; nunca conteúdo corrido." }
+    },
+    "shadows": [
+      { "name": "soft", "value": "0 2px 10px rgba(64, 48, 26, 0.08)", "purpose": "Superfícies comuns: cards, chips, tags." },
+      { "name": "card", "value": "0 10px 30px rgba(64, 48, 26, 0.1)", "purpose": "Retrato do hero e menu aberto." }
+    ],
+    "motion": [
+      { "name": "reveal", "value": "opacity .55s ease, transform .55s ease", "purpose": "Entrada de blocos ao rolar; disparado por IntersectionObserver, nunca repetido." },
+      { "name": "carousel-auto", "value": "4000ms interval (Bootstrap Carousel: data-bs-interval + data-bs-pause=hover, wrap, touch)", "purpose": "Avanço automático do carrossel dirigido pelo runtime oficial do Bootstrap 5; pausa no hover; desligado sob prefers-reduced-motion pelo próprio Bootstrap." },
+      { "name": "hover-lift", "value": "transform .15s ease", "purpose": "Cards e botões sobem 2–3px no hover; borda muda, sombra nunca." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "900px" },
+      { "name": "lg", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão Primário",
+      "kind": "button",
+      "refersTo": "btn-primary",
+      "description": "CTA principal; couro sobre branco.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Ver minha experiência</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .7rem 1.4rem; border-radius: 10px; background: #92400e; color: #fff; font-weight: 600; transition: transform .15s ease, background-color .2s ease; } .ds-btn-primary:hover { background: #7c3410; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #0f766e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Botão Outline",
+      "kind": "button",
+      "refersTo": "btn-outline",
+      "description": "CTA secundário (LinkedIn/GitHub); hover muda para teal.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">LinkedIn ↗</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .7rem 1.4rem; border-radius: 10px; border: 1.5px solid #d9cebc; background: transparent; color: #23262b; font-weight: 600; transition: transform .15s ease, border-color .2s ease, color .2s ease; } .ds-btn-outline:hover { border-color: #0f766e; color: #0f766e; transform: translateY(-2px); }"
+    },
+    {
+      "name": "Card de Serviço",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Slide do carrossel: ícone SVG em quadrado teal-suave, kicker, título serifa, descrição.",
+      "html": "<article class=\"ds-service-card\"><span class=\"ds-service-icon\"><!-- tag --></span><p class=\"ds-service-kicker\">01 · Revenda</p><h3 class=\"ds-service-title\">Móveis novos e usados</h3><p class=\"ds-service-desc\">A loja revende móveis novos e usados e todos os produtos consertados na oficina.</p></article>",
+      "css": ".ds-service-card { display: flex; flex-direction: column; gap: .7rem; background: #fff; border: 1px solid #e6ddcf; border-radius: 16px; padding: 1.6rem; box-shadow: 0 2px 10px rgba(64,48,26,.08); } .ds-service-icon { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 10px; background: #e7f1ef; color: #0f766e; } .ds-service-icon svg { width: 28px; height: 28px; } .ds-service-kicker { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a9199; } .ds-service-title { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 900; line-height: 1.15; } .ds-service-desc { color: #5c636d; }"
+    },
+    {
+      "name": "Card de Experiência (Job Card)",
+      "kind": "card",
+      "refersTo": "job-card",
+      "description": "Bloco da loja com borda esquerda âmbar e período em pílula.",
+      "html": "<article class=\"ds-job-card\"><div class=\"ds-job-main\"><h3 class=\"ds-job-title\">Técnico de Linha Branca e Eletrodomésticos</h3><p class=\"ds-job-company\">Loja de móveis novos e usados</p><p class=\"ds-job-desc\">Trabalho em uma loja que revende móveis novos e usados, atuando no conserto e na revenda de todos os produtos da loja.</p></div><p class=\"ds-job-period\">2016 — até o momento</p></article>",
+      "css": ".ds-job-card { display: flex; flex-direction: column; gap: 1rem; background: #fff; border: 1px solid #e6ddcf; border-left: 4px solid #92400e; border-radius: 16px; padding: 1.4rem; box-shadow: 0 2px 10px rgba(64,48,26,.08); } .ds-job-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; } .ds-job-company { font-weight: 600; color: #5c636d; } .ds-job-desc { color: #5c636d; } .ds-job-period { align-self: flex-start; font-size: .85rem; font-weight: 700; color: #92400e; background: #f8ede2; border-radius: 999px; padding: .3rem .85rem; } @media (min-width: 640px) { .ds-job-card { flex-direction: row; justify-content: space-between; } .ds-job-main { max-width: 70%; } }"
+    },
+    {
+      "name": "Carrossel de Serviços (Bootstrap 5)",
+      "kind": "custom",
+      "refersTo": "carousel",
+      "description": "Componente Carousel do Bootstrap 5 (carousel-fade) vendido localmente; movimento dirigido pelo runtime oficial, aparência totalmente nossa.",
+      "html": "<div id=\"storeCarousel\" class=\"carousel carousel-fade\" data-bs-ride=\"carousel\" data-bs-interval=\"4000\" data-bs-pause=\"hover\" data-bs-wrap=\"true\" data-bs-touch=\"true\"><div class=\"carousel-inner\" role=\"listbox\"><div class=\"carousel-item active\"><!-- service-card --></div></div><button class=\"carousel-control-prev carousel-control-custom\" type=\"button\" data-bs-target=\"#storeCarousel\" data-bs-slide=\"prev\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"15 18 9 12 15 6\"/></svg><span class=\"visually-hidden\">Anterior</span></button><button class=\"carousel-control-next carousel-control-custom\" type=\"button\" data-bs-target=\"#storeCarousel\" data-bs-slide=\"next\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"/></svg><span class=\"visually-hidden\">Próximo</span></button><div class=\"carousel-indicators\"><button type=\"button\" data-bs-target=\"#storeCarousel\" data-bs-slide-to=\"0\" class=\"active\"></button><button type=\"button\" data-bs-target=\"#storeCarousel\" data-bs-slide-to=\"1\"></button><button type=\"button\" data-bs-target=\"#storeCarousel\" data-bs-slide-to=\"2\"></button></div></div>",
+      "css": ".carousel { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .5rem 1rem; } .carousel-inner { grid-column: 1 / -1; border-radius: 16px; } .carousel-item { background: #fff; border: 1px solid #e6ddcf; border-radius: 16px; box-shadow: 0 10px 30px rgba(64,48,26,.1); padding: 1.6rem; } .carousel-control-custom { position: static; justify-self: center; width: 44px; height: 44px; border: 1px solid #d9cebc; border-radius: 50%; background: #fff; color: #23262b; box-shadow: 0 2px 10px rgba(64,48,26,.08); opacity: 1; } .carousel-control-custom:hover { background: #92400e; border-color: #92400e; color: #fff; } .carousel-control-prev.carousel-control-custom { grid-column: 1; grid-row: 2; } .carousel-control-next.carousel-control-custom { grid-column: 3; grid-row: 2; } .carousel-indicators { grid-column: 2; grid-row: 2; position: static; margin: 0; display: flex; gap: .5rem; } .carousel-indicators [data-bs-target] { width: 30px; height: 5px; border: 0; border-radius: 999px; background: #d9cebc; opacity: 1; } .carousel-indicators [data-bs-target].active { width: 48px; background: #92400e; }"
+    },
+    {
+      "name": "Card de Formação",
+      "kind": "card",
+      "refersTo": "edu-card",
+      "description": "Instituição; card atual com borda teal e badge 'Em curso'.",
+      "html": "<article class=\"ds-edu-card ds-edu-current\"><span class=\"ds-edu-badge\">Em curso</span><h3 class=\"ds-edu-title\">Análise e Desenvolvimento de Sistemas</h3><p class=\"ds-edu-org\">IFSP — Instituto Federal de São Paulo · Guarulhos</p><p class=\"ds-edu-period\">2º semestre · em curso</p></article>",
+      "css": ".ds-edu-card { background: #fff; border: 1px solid #e6ddcf; border-radius: 16px; padding: 1.4rem; box-shadow: 0 2px 10px rgba(64,48,26,.08); } .ds-edu-current { border-color: #0f766e; background: #fdfbf7; } .ds-edu-badge { display: inline-block; font-size: .72rem; font-weight: 700; color: #0f766e; background: #e7f1ef; border: 1px solid rgba(15,118,110,.3); border-radius: 999px; padding: .14rem .6rem; margin-bottom: .6rem; } .ds-edu-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 700; } .ds-edu-org { color: #5c636d; } .ds-edu-period { font-weight: 700; color: #92400e; margin-top: .7rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Vitrine",
+    "overview": "O portfólio se apresenta como uma vitrine clara e acolhedora de loja, mas com a programação em primeiro plano: a identidade é de desenvolvedor web e estudante de ADS; projetos, linguagens e formação vêm antes; e a longa carreira na loja (2016—hoje, conserto e revenda de linha branca e eletrodomésticos) aparece como coadjuvante, na seção 'Além do código'. Um acento âmbar 'couro' para a ação e um verde-azulado técnico para a tecnologia. A rolagem muda de eixo: a página rola vertical com âncoras suaves, e a linha de serviços da loja roda no carrossel em cross-fade dirigido pelo componente Carousel do Bootstrap 5 (vendido localmente, sem runtime de rede); a aparência nunca parece Bootstrap (toda a pele é custom). Recusa o template de terminal/repositório git anterior (pedido do usuário: manter característica de portfólio, remover as do git).",
+    "keyCharacteristics": [
+      "Ordem das seções é a hierarquia: hero → Projetos (+ linguagens) → Formação → Experiência (Além do código, coadjuvante, com o carrossel de serviços) → Contato.",
+      "Hero: 'Desenvolvedor Web · Estudante de ADS' em primeiro plano; marca d'água 'dev.' em serifa; retrato com moldura leve + anel tracejado; sobrenome itálico âmbar.",
+      "Card de experiência com carimbo de anos (serifa '2016' + 'até o momento'), sem borda esquerda, enquadrado como contexto.",
+      "Carrossel de 3 slides: componente Carousel do Bootstrap 5 (fade, interval 4000ms, pausa no hover, wrap, touch); setas redondas + indicadores em barras que alongam; grade auto 1fr auto.",
+      "Rodapé de contato com CTAs LinkedIn/GitHub e ano dinâmico."
+    ],
+    "rules": [
+      { "name": "The Dual-Career Color Rule", "body": "Couro para o ofício (conserto/revenda), teal para a tecnologia (links, chips, badges, kickers). As duas linguagens nunca se confundem.", "section": "colors" },
+      { "name": "The Serif-Only-For-Identity Rule", "body": "Fraunces só para identidade: nome e títulos. Prosa, botões e chips em IBM Plex Sans.", "section": "typography" },
+      { "name": "The Bootstrap-Engine Rule", "body": "O carrossel é dirigido pelo componente Carousel do Bootstrap 5 (data-bs-ride/interval/pause/wrap/touch). Nunca reimplementar animação de slide com rAF/scroll-snap; a pele continua nossa (controles, indicadores, fade), mas o movimento é o do runtime oficial.", "section": "motion" }
+    ],
+    "dos": [
+      "Do manter a dualidade central: ofício (couro/conserto/revenda) e tecnologia (teal/estudo/projeto) sempre distinguíveis por cor.",
+      "Do usar Fraunces apenas para identidade (nomes e títulos); prosa em IBM Plex Sans.",
+      "Do manter o carrossel acessível via Bootstrap: setas round com aria-label, indicadores-barra, pause no hover, wrap, touch; se JS falhar, o fallback scripting:none mostra o primeiro slide.",
+      "Do preservar fatos reais: experiência 2016—hoje na loja, linhas de conserto (refrigeração, lavadoras, micro-ondas) e revenda de todos os produtos + móveis novos e usados.",
+      "Do manter a página 100% estática, mobile-first, pt-BR, pronta para GitHub Pages; o Bootstrap fica em vendor/bootstrap/ (sem rede em runtime).",
+      "Do tratar prefers-reduced-motion e :focus-visible (outline teal 2px) como nativos."
+    ],
+    "donts": [
+      "Don't reintroduzir o vocabulário git (terminal, commits, hashes, branches, git log, $) — remoção pedida pelo usuário.",
+      "Don't usar glow cromático ou sombras coloridas; a elevação é a sombra neutra em tom de madeira.",
+      "Don't criar outro eyebrow/kicker acima dos headings além dos kickers de seção em teal.",
+      "Don't reimplementar o movimento do carrossel (nem rAF, nem scroll-snap, nem setInterval próprio): quem move é o Carousel do Bootstrap 5."
+    ]
+  }
+}
